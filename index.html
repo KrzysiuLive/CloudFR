@@ -57,14 +57,15 @@
             color: #fff;
         }
         nav {
-            background-color: #333;
+            background: url('twoje_zdjecie.jpg') no-repeat center center;
+            background-size: cover;
             color: #fff;
             padding: 10px 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            transition: background-color 0.3s ease-in-out;
+            transition: background 0.3s ease-in-out;
         }
         nav .container {
             display: flex;
@@ -83,17 +84,13 @@
         nav .navbar-toggler {
             display: none;
         }
-        nav img {
-            height: 40px; /* Adjust the height as needed */
-            border-radius: 50%;
-            margin-right: 10px;
-        }
         @media (max-width: 768px) {
             nav .navbar-collapse {
                 display: none;
                 flex-direction: column;
                 align-items: flex-start;
-                background-color: #333;
+                background: url('twoje_zdjecie.jpg') no-repeat center center;
+                background-size: cover;
                 width: 100%;
             }
             nav .navbar-toggler {
@@ -115,10 +112,7 @@
 <body>
     <nav>
         <div class="container">
-            <div style="display: flex; align-items: center;">
-                <img src="path/to/your/image.jpg" alt="Logo"> <!-- Replace with your image path -->
-                <a class="navbar-brand" href="/">Cloud FreeRoam</a>
-            </div>
+            <a class="navbar-brand" href="/">Cloud FreeRoam</a>
             <div class="navbar-toggler" onclick="toggleNavbar()">☰</div>
             <div class="navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
