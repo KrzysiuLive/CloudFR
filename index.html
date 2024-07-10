@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serwer FiveM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header, .section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            color: #0056b3;
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Witamy na Serwerze FiveM</h1>
+        </div>
+        
+        <div class="section">
+            <h2>Statystyki Serwera</h2>
+            <div class="stat">
+                <span>Rekord Graczy:</span>
+                <span id="rekordGraczy">120</span>
+            </div>
+            <div class="stat">
+                <span>Unikalnych Graczy:</span>
+                <span id="unikalnychGraczy">450</span>
+            </div>
+            <div class="stat">
+                <span>Osób na Discordzie:</span>
+                <span id="osobyDiscord">300</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Co Oferuje Nasz Serwer</h2>
+            <ul>
+                <li>Rozbudowany system ekonomiczny</li>
+                <li>Realistyczne mechaniki pojazdów</li>
+                <li>Różnorodne zadania i misje</li>
+                <li>Aktywną społeczność i wsparcie administracyjne</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Twórcy Projektu</h2>
+            <ul>
+                <li>Jan Kowalski - Główny Programista</li>
+                <li>Anna Nowak - Grafik</li>
+                <li>Piotr Wiśniewski - Administrator Serwera</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 Serwer FiveM. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </div>
+
+    <script>
+        // Tu możesz dodać kod JavaScript do dynamicznego aktualizowania statystyk.
+        // Przykład użycia fetch API do pobierania danych z serwera:
+        // fetch('/api/stats')
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         document.getElementById('rekordGraczy').textContent = data.rekordGraczy;
+        //         document.getElementById('unikalnychGraczy').textContent = data.unikalnychGraczy;
+        //         document.getElementById('osobyDiscord').textContent = data.osobyDiscord;
+        //     });
+    </script>
+</body>
+</html>
