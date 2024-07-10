@@ -1,425 +1,175 @@
-
-<!doctype html>
-<html class="no-js" lang="zxx">
+<!DOCTYPE html>
+<html lang="pl">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>NeonRP - Strona Głowna</title>
-<meta name="description" content>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-
-<meta name="google-site-verification" content="GFVj4HrLQHzvOyvvBr-npsVLxHyzsFBGnPsxBxxNOcg" />
-
-
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/animate.min.css">
-<link rel="stylesheet" href="css/magnific-popup.css">
-<link rel="stylesheet" href="fontawesome/css/all.min.css">
-<link rel="stylesheet" href="font-flaticon/flaticon.css">
-<link rel="stylesheet" href="css/dripicons.css">
-<link rel="stylesheet" href="css/slick.css">
-<link rel="stylesheet" href="css/meanmenu.css">
-<link rel="stylesheet" href="css/default.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud FreeRoam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header, .section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+        .header {
+            text-align: center;
+            background-color: #0056b3;
+            color: #fff;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #0056b3;
+        }
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .stat span:last-child {
+            color: #0056b3;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+        nav {
+            background: url('https://imgur.com/8tS4aOz.jpg') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease-in-out;
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        nav .navbar-toggler {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            nav .navbar-collapse {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                background: url('https://imgur.com/8tS4aOz.jpg') no-repeat center center;
+                background-size: cover;
+                width: 100%;
+            }
+            nav .navbar-toggler {
+                display: block;
+                cursor: pointer;
+            }
+            nav .navbar-collapse.show {
+                display: flex;
+            }
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
+    <nav>
+        <div class="container">
+            <a class="navbar-brand" href="/">Cloud FreeRoam</a>
+            <div class="navbar-toggler" onclick="toggleNavbar()">☰</div>
+            <div class="navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/1v_TsASqZTem0qA7KfBIC_VKuHPCW7E_8PNBa7lsp3oI/edit?usp=sharing" target="_blank">Regulamin</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://discord.gg/cloudfr" target="_blank">Discord</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fivem://connect 83.168.69.242:30122">FiveM</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://discord.gg/cloudfr">Sklep</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container" style="padding-top: 80px;">
+        <div class="header">
+            <h1>Witamy na Serwerze Cloud FreeRoam</h1>
+        </div>
+        
+        <div class="section">
+            <h2>Statystyki Serwera</h2>
+            <div class="stat">
+                <span>Rekord Graczy:</span>
+                <span id="rekordGraczy">48</span>
+            </div>
+            <div class="stat">
+                <span>Unikalnych Graczy:</span>
+                <span id="unikalnychGraczy">100+</span>
+            </div>
+            <div class="stat">
+                <span>Osób na Discordzie:</span>
+                <span id="osobyDiscord">250+</span>
+            </div>
+        </div>
 
-<header class="header-area header-three">
-<div id="header-sticky" class="menu-area">
-<div class="container-fluid pl-50 pr-50">
-<div class="second-menu">
-<div class="row align-items-center">
-<div class="col-xl-1 col-lg-1">
-<div class="logo">
-<a href="index.html"><img src="img/logo/logonn.png" alt="logo"></a>
-</div>
-</div>
-<div class="col-xl-2 col-lg-2">
-</div>
-<div class="col-xl-6 col-lg-6">
-<div class="main-menu">
-<nav id="mobile-menu">
-<ul>
-<li class="has-sub">
-<a href="index.html">Home</a>
-</li>
-<li><a href="regulamin.html">Regulamin</a></li>
-<li><a href="regulamin-crime.html">Regulamin Crime</a></li>
-<li><a href="statystyki/index.php">Statystyki</a></li>
-<li class="has-sub"><a href="#">Inne</a>
-<ul>
-<li><a href="galeria.html">Galeria</a></li>
-<li><a href="https://status.neonrp.pl/">Status</a></li>
-<li><a href="administracja.html">Administracja</a></li>
-<li><a href="faq.html">FAQ</a>
-</li>
-</ul>
-</li>
-<li><a href="https://neonrp.pl/sklep/">Sklep</a></li>
-</ul>
-</nav>
-</div>
-</div>
-<div class="col-xl-2 col-lg-2 text-left d-none d-lg-block mt-30 mb-30">
-<div class="cart-top">
-<ul>
-<li><a href="https://discord.com/invite/neonrp"><i class="fab fa-discord"></i></a></li>
-</ul>
-</div>
-</div>
-<div class="col-xl-1 col-lg-1 text-right d-none d-lg-block mt-30 mb-30">
-<a href="#" class="menu-tigger"><img src="img/bg/toggle-menu.png" alt="logo"></a>
-</div>
-<div class="col-12">
-<div class="mobile-menu"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</header>
+        <div class="section">
+            <h2>Co Oferuje Nasz Serwer</h2>
+            <ul>
+                <li>Wiele customowych interiorów</li>
+                <li>Realistyczne mechaniki pojazdów</li>
+                <li>Wiele graczy chętnych do odgrywania roli</li>
+                <li>Wsparcie administracyjne</li>
+            </ul>
+        </div>
 
-
-<div class="offcanvas-menu">
-<span class="menu-close"><i class="fas fa-times"></i></span>
-<div id="cssmenu3" class="menu-one-page-menu-container">
-<ul id="menu-one-page-menu-2" class="menu">
-<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="index.html">Home</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="regulamin.html">Regulamin</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="statystyki/index.php">Statystyki</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="galeria.html">Galeria </a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="administracja.html">Administracja </a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="tos.html">TOS</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://status.neonrp.pl/">Status</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://neonrp.pl/sklep/">Sklep</a></li>
-</ul>
-</div>
-</div>
-<div class="offcanvas-overly"></div>
-
-
-<main>
-
-
-<section id="home" class="slider-area slider-four fix p-relative">
-<div class="slider-active">
-<div class="single-slider slider-bg d-flex align-items-center" style="background: url(img/slider/slider_img_bg.png) no-repeat;background-size: cover; background-position: center top;">
-<div class="container">
-<div class="row justify-content-center pt-50">
-<div class="col-lg-1 col-md-1">
-</div>
-<div class="col-lg-6 col-md-6">
-<div class="slider-content s-slider-content">
-<h5 data-animation="fadeInDown" data-delay=".4s">#neonrp</h5>
-<h2 data-animation="fadeInUp" data-delay=".4s">Stań się kim tylko chcesz dołączając na nasz serwer!</h2>
-<div class="slider-btn">
-<a href="fivem://connect/ls.neonrp.pl:30120" class="btn ss-btn mr-15">Uruchom Fivem</a>
-</div>
-</div>
-</div>
-<div class="col-lg-5 col-md-5">
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-
-<section id="about" class="about-area about-p p-relative" style="background: url(img/bg/about-bg.png) no-repeat;">
-<div class="container">
-<div class="row align-items-center">
-<div class="col-lg-12">
-<div class="section-title center-align text-center mb-50">
-<h2>
-Co nas <span>wyróżnia?</span>
-</h2>
-<div class="line5"> <img src="img/bg/circle_left.png" alt="circle_left"></div>
-</div>
-</div>
-</div>
-</section>
-
-
-<section id="services" class="services-area what-story pb-90 fix">
-<div class="container">
-<div class="row">
-<div class="col-lg-4 col-md-6">
-<div class="services-box mb-30" style="background: url(img/bg/services-bg-01.png) no-repeat;background-size: contain; background-position: center bottom; background-size: cover;">
-<div class="services-content2">
-<div class="services-icon">
-<img src="img/icon/pv-icon1.png" alt="icon01">
-<h5>Optymalizacja</h5>
-</div>
-<p>Na naszym serwerze wyznacznikiem jest komfort naszych graczy.</p>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="services-box mb-30" style="background: url(img/bg/services-bg-01.png) no-repeat;background-size: contain; background-position: center bottom; background-size: cover;">
-<div class="services-content2">
-<div class="services-icon">
-<img src="img/icon/pv-icon2.png" alt="icon01">
-<h5>Doświadczenie</h5>
-</div>
-<p>Projekt rozwija grupa osób posiadająca doświadczenie oraz należną wiedzę.</p>
-</div>
-</div>
-</div>
-<div class="col-lg-4 col-md-6">
-<div class="services-box mb-30" style="background: url(img/bg/services-bg-01.png) no-repeat;background-size: contain; background-position: center bottom; background-size: cover;">
-<div class="services-content2">
-<div class="services-icon">
-<img src="img/icon/pv-icon3.png" alt="icon01">
-<h5>Innowacje</h5>
-</div>
-<p>Nasz serwer posiada wiele innowacyjnych oraz autorskich rozwiązań.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-
-<section id="services" class="services-area what-story pt-120 pb-70 fix" style="background: url(img/bg/match-bg2.png) no-repeat;">
-<div class="container">
-<div class="row">
-<div class="col-lg-12 p-relative">
-<div class="section-title mb-50">
-<h2>
-ZNajdziesz u <span>nas</span>
-</h2>
-<span class="line5"> <img src="img/bg/circle_left.png" alt="circle_left"></span>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-3 col-md-6">
-<div class="services-box text-center mb-30">
-<div class="services-icon p-relative mb-30">
-<img src="img/matches/m-07.png" alt="icon01">
-<span>Auta</span>
-</div>
-<div class="services-content3">
-<h4>Customowe Auta</h4>
-<h6>Ponad 200+ róznych modeli samochodów u cardealera</h6>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="services-box text-center mb-30">
-<div class="services-icon p-relative mb-30">
-<img src="img/matches/m-08.png" alt="icon01">
-<span>Crime</span>
-</div>
-<div class="services-content3">
-<h4>Statystyki Organizacji</h4>
-<h6>Autorski system punktacji za wykonance akcje</h6>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="services-box text-center mb-30">
-<div class="services-icon p-relative mb-30">
-<img src="img/matches/m-09.png" alt="icon01">
-<span>Eventy</span>
-</div>
-<div class="services-content3">
-<h4>Eventy</h4>
-<h6>Liczne eventy, zabawy oraz wspólne interakcje!</h6>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="services-box text-center mb-30">
-<div class="services-icon p-relative mb-30">
-<img src="img/matches/m-10.png" alt="icon01">
-<span>Lokacje</span>
-</div>
-<div class="services-content3">
-<h4>Customowe Lokacje</h4>
-<h6>Znajdziesz u nas ciekawe lokalizacje do odgrywania</h6>
-</div>
-</div>
-</div>
-</div>
-<div class="row align-items-center pt-90">
-<div class="col-lg-12 col-md-12 best-gaming" style="background: url(img/features/about_img2.png) no-repeat; background-size: contain;">
-<div class="row">
-<div class="col-lg-6 col-md-12 col-sm-12 pl-50">
-<div class="about-content s-about-content pl-30">
-<div class="about-title second-title pb-25">
-<h2>Jak zacząć grać na serwerze <span>NeonRP</span></h2>
-<div class="line"> <img src="img/bg/circle_left.png" alt="circle_right"></div>
-</div>
-<p>1. Zainstaluj grę Grand Theft Auto V<br> </p>
-<p>2. Pobierz i zainstaluj modyfikacje Fivem<br> </p>
-<p>3. Zaloguj się na steam<br> </p>
-<p>4. Odpal fivem i połącz się z serwerem wpisując w konsoli "connect neonrp.pl<br> </p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="container" style="padding-top: 80px;">
-<div class="row brand-active">
-<div class="col-xl-2">
-<div class="single-brand">
-<img src="img/brand/b-logo1.png" alt="img">
-</div>
-</div>
-<div class="col-xl-2">
-<div class="single-brand">
-<img src="img/brand/b-logo2.png" alt="img">
-</div>
-</div>
-<div class="col-xl-2">
-<div class="single-brand">
-<img src="img/brand/b-logo3.png" alt="img">
-</div>
-</div>
-<div class="col-xl-2">
-<div class="single-brand">
-<img src="img/brand/b-logo4.png" alt="img">
-</div>
-</div>
-<div class="col-xl-2">
-<div class="single-brand">
-<img src="img/brand/b-logo5.png" alt="img">
-</div>
-</div>
-<div class="col-xl-2">
-<div class="single-brand">
-<img src="img/brand/b-logo6.png" alt="img">
-</div>
-</div>
-</div>
-</div>
-</section>
-
-
-<section id="graph" class="features-area pt-120 pb-120" style="background:url('img/bg/divider-bg.png');">
-<div class="container">
-<div class="row align-items-center text-center">
-<div class="col-lg-12 col-md-12">
-<div class="section-title cta-title  mb-20">
-<h2>Dołącz do community <br> 30.000+ osób!</h2>
-<p>Wierzymy w siłę społeczności. Jako Neon Team jesteśmy bardzo wdzięczni wszystkim, którzy przyczyniają się do projektu. Wnieś swój wkład tworząc historie wraz z innymi członkami naszego community! </p>
-</div>
-<a href="https://discord.com/invite/neonrp" class="btn ss-btn mr-15 mt-20 active">Dołącz</a>
-</div>
-</div>
-</div>
-</section>
-
-</main>
-
-
-<footer class="footer-bg footer-p" style="background: #1e191f;">
-<div class="footer-top pt-70">
-<div class="container">
-<div class="row justify-content-between">
-<div class="col-xl-4 col-lg-4 col-sm-6">
-<div class="footer-widget mb-30">
-<div class="f-widget-title mb-20">
-<img src="img/logo/f_logo.png" alt="img">
-</div>
-<div class="footer-link">
-NeonRP nie jest powiązany ani wspierany przez Rockstar North,
-Take-Two Interactive ani innych posiadaczy praw.
-</div>
-<div class="f-contact mt-20">
-<ul>
-<li>
-<i class="icon dripicons-mail"></i>
-<span>Email : <a href="/cdn-cgi/l/email-protection#8ce5e2eae3cce9f4ede1fce0e9a2efe3e1"><span class="__cf_email__" data-cfemail="23414a594d4650634d464c4d5746404b4d4c4f4c444a46500d534f">[email&#160;protected]</span></a></span>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-xl-2 col-lg-2 col-sm-6">
-<div class="footer-widget mb-30">
-<div class="f-widget-title">
-<h2>Szybkie Linki</h2>
-</div>
-<div class="footer-link">
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="regulamin.html"> Regulamin</a></li>
-<li><a href="https://discord.com/invite/neonrp"> Discord </a></li>
-<li><a href="https://neonrp.pl/sklep/"> Sklep</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-xl-2 col-lg-2 col-sm-6">
-<div class="footer-widget mb-30">
-<div class="f-widget-title">
-<h2>Inne</h2>
-</div>
-<div class="footer-link">
-<ul>
-<li><a href="faq.html">FAQ</a></li>
-<li><a href="https://status.neonrp.pl/">Status</a></li>
-<li><a href="galeria.html">Galeria</a></li>
-<li><a href="administracja.html">Administracja</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-xl-3 col-lg-3 col-sm-6">
-<div class="footer-widget mb-30">
-<div class="f-widget-title">
-<h2>Społeczność</h2>
-</div>
-<div class="footer-social  mt-30">
-<a href="#"><i class="fab fa-facebook-f"></i></a>
-<a href="https://discord.com/invite/neonrp"><i class="fab fa-discord"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="copyright-wrap">
-<div class="container">
-<div class="row align-items-center">
-<div class="col-lg-6">
-Copyright © 2022-2024 NeonRP All Rights Reserved.
-</div>
-<div class="col-lg-6 text-right text-xl-right">
-</div>
-</div>
-</div>
-</div>
-</footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://skrypt-cookies.pl/id/e361a616db01e03e.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-
-<script src="js/vendor/modernizr-3.5.0.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/vendor/jquery-3.6.0.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/popper.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/bootstrap.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/slick.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/ajax-form.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/paroller.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/wow.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/js_isotope.pkgd.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/imagesloaded.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/parallax.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/jquery.waypoints.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/jquery.counterup.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/jquery.scrollUp.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/jquery.meanmenu.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/parallax-scroll.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/jquery.magnific-popup.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/element-in-view.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="js/main.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
-<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="c65c680bdad69620af0a3e4e-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8a1433192c72cabd","version":"2024.6.1","r":1,"token":"6fb385c6ed114d51a819caf752557691","serverTiming":{}}' crossorigin="anonymous"></script>
+        <div class="section">
+            <h2>Twórcy Projektu</h2>
+            <ul>
+                <li>Junor - Właściciel</li>
+                <li>Kezly - Właściciel</li>
+                <li>Kajo - Właściciel</li>
+                <li>Lisu - Właściciel</li>
+                <li>KrzysiuLive - Programista Strony</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 Cloud FreeRoam. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </div>
 </body>
 </html>
