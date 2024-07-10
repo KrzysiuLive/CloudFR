@@ -1,301 +1,425 @@
 
-<!DOCTYPE html>
-<html lang="pl">
+<!doctype html>
+<html class="no-js" lang="zxx">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Strona główna :: OsloRP</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/uploads/orp-logo-66204c591539b.png" />
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>NeonRP - Strona Głowna</title>
+<meta name="description" content>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 
-    <!-- Web Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css" rel="stylesheet">
+<meta name="google-site-verification" content="GFVj4HrLQHzvOyvvBr-npsVLxHyzsFBGnPsxBxxNOcg" />
 
-    <!-- ========================= CSS here ========================= -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/tippy.js@5/animations/scale.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
 
-<meta name="google-site-verification" content="VZTkNQudfVzWVhP9fyEMdJ6vbUONe123GzUIs3lFmVI" />
-
-    <meta name="title" content="OsloRP - WL:OFF : FiveM" />
-    <meta name="description" content="Więcej niż tylko gra, to świat pełen niespodzianek! Tutaj nie ma granic dla twojej wyobraźni. Dołącz do naszej społeczności, gdzie każda postać ma swój niepowtarzalny wpływ. Czekają tu na ciebie nie tylko skrypty, ale również przyjazne community. Przygotuj się na niezapomnianą przygodę - dołącz już teraz!" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://oslorp.pl" />
-    <meta property="og:title" content="OsloRP - WL:OFF : FiveM" />
-    <meta property="og:description" content="Więcej niż tylko gra, to świat pełen niespodzianek! Tutaj nie ma granic dla twojej wyobraźni. Dołącz do naszej społeczności, gdzie każda postać ma swój niepowtarzalny wpływ. Czekają tu na ciebie nie tylko skrypty, ale również przyjazne community. Przygotuj się na niezapomnianą przygodę - dołącz już teraz!" />
-    <meta property="og:image" content="https://oslorp.pl/assets/uploads/a_40eb1ca019f955fc04ac82b6d42cf36a.png" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://oslorp.pl" />
-    <meta property="twitter:title" content="OsloRP - WL:OFF : FiveM" />
-    <meta property="twitter:description" content="Więcej niż tylko gra, to świat pełen niespodzianek! Tutaj nie ma granic dla twojej wyobraźni. Dołącz do naszej społeczności, gdzie każda postać ma swój niepowtarzalny wpływ. Czekają tu na ciebie nie tylko skrypty, ale również przyjazne community. Przygotuj się na niezapomnianą przygodę - dołącz już teraz!" />
-    <meta property="twitter:image" content="https://oslorp.pl/assets/uploads/a_40eb1ca019f955fc04ac82b6d42cf36a.png" />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="fontawesome/css/all.min.css">
+<link rel="stylesheet" href="font-flaticon/flaticon.css">
+<link rel="stylesheet" href="css/dripicons.css">
+<link rel="stylesheet" href="css/slick.css">
+<link rel="stylesheet" href="css/meanmenu.css">
+<link rel="stylesheet" href="css/default.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
 </head>
-<body class="homepage">
-    <ul id="orp-mobileNav">
-        <li class="orp-mobileNav_item">
-            <a href="#" id="orp-mobileNav_button"><i class="fa-solid fa-bars"></i></a>
-        </li>
-    </ul>
+<body>
 
-        <header id="orp-header">
-    <div class="orp-container">
-        <div class="orp-header_content">
-            <a href="#" class="orp-header_logo">
-                <img src="/assets/uploads/orp-logo-66204c591539b.png" alt="">
-            </a>
-
-            <nav class="orp-header_menu">
-                <ul>
-    <li><a href="/" data-text="Strona główna">Strona główna</a></li>
-    <li><a href="/ranking" data-text="Ranking">Ranking</a></li>
-    <li><a href="/apps" data-text="Podania">Podania</a></li>
-    <li><a href="https://discord.gg/oslorp" data-text="Discord">Discord</a></li>
-    <li><a href="https://indrop.eu/s/oslorp" data-text="Sklep">Sklep</a></li>
-</ul>            </nav>
-
-                            <ul class="orp-header_userbar">
-                    <li class="orp-header_userbar-login"><a href="/login">Logowanie</a></li>
-                </ul>
-                    </div>
-    </div>
+<header class="header-area header-three">
+<div id="header-sticky" class="menu-area">
+<div class="container-fluid pl-50 pr-50">
+<div class="second-menu">
+<div class="row align-items-center">
+<div class="col-xl-1 col-lg-1">
+<div class="logo">
+<a href="index.html"><img src="img/logo/logonn.png" alt="logo"></a>
+</div>
+</div>
+<div class="col-xl-2 col-lg-2">
+</div>
+<div class="col-xl-6 col-lg-6">
+<div class="main-menu">
+<nav id="mobile-menu">
+<ul>
+<li class="has-sub">
+<a href="index.html">Home</a>
+</li>
+<li><a href="regulamin.html">Regulamin</a></li>
+<li><a href="regulamin-crime.html">Regulamin Crime</a></li>
+<li><a href="statystyki/index.php">Statystyki</a></li>
+<li class="has-sub"><a href="#">Inne</a>
+<ul>
+<li><a href="galeria.html">Galeria</a></li>
+<li><a href="https://status.neonrp.pl/">Status</a></li>
+<li><a href="administracja.html">Administracja</a></li>
+<li><a href="faq.html">FAQ</a>
+</li>
+</ul>
+</li>
+<li><a href="https://neonrp.pl/sklep/">Sklep</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="col-xl-2 col-lg-2 text-left d-none d-lg-block mt-30 mb-30">
+<div class="cart-top">
+<ul>
+<li><a href="https://discord.com/invite/neonrp"><i class="fab fa-discord"></i></a></li>
+</ul>
+</div>
+</div>
+<div class="col-xl-1 col-lg-1 text-right d-none d-lg-block mt-30 mb-30">
+<a href="#" class="menu-tigger"><img src="img/bg/toggle-menu.png" alt="logo"></a>
+</div>
+<div class="col-12">
+<div class="mobile-menu"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </header>
-    <section id="orp-hero">
-        <div class="orp-container">
-            <div class="orp-hero_content">
-                <div class="orp-hero_content-text">
-                    <h1 class="orp-hero_content-text_title">WITAJ GRACZU <b>OSLORP!</b></h1>
-                    <p class="orp-hero_content-text_desc">Więcej niż tylko gra, to świat pełen niespodzianek! Tutaj nie ma granic dla twojej wyobraźni. Dołącz do naszej społeczności, gdzie każda postać ma swój niepowtarzalny wpływ. Czekają tu na ciebie nie tylko skrypty, ale również przyjazne community. Przygotuj się na niezapomnianą przygodę - dołącz już teraz!</p>
-                    <ul class="orp-hero_content-text_buttons">
-                                                    <li><a href="https://discord.gg/oslorp">Dołącz teraz!</a></li>
-                                                                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="orp-about">
-        <div class="orp-container">
-            <div class="orp-about_content">
-                <div class="orp-about_logo"></div>
 
-                <div class="orp-about_text">
-                    <h2 class="orp-about_text-title">O nas - <span>OSLO RP</span></h2>
-                    <p class="orp-about_text-subtitle">OsloRP, serwer z czteroletnią historią na scenie FiveM, to miejsce, gdzie priorytetem jest społeczność graczy.</p>
-                    <p class="orp-about_text-desc">Tutaj każdy czuje się jak w domu, niezależnie od doświadczenia w grach RP. Nasze zaangażowanie widoczne jest w ciągłym rozwijaniu serwera, który oferuje wyjątkowe, autorskie skrypty i nieograniczone możliwości kreowania postaci. Jesteśmy dumni z naszej zgranej społeczności, która wspólnie tworzy niesamowite historie i doświadczenia. Nasz serwer jest miejscem, gdzie możesz wcielić się w każdą rolę, od przedsiębiorcy po detektywa, w świecie, który stale ewoluuje i zaskakuje. Nasz zespół developerski pracuje nieustannie nad nowymi funkcjami, aby zapewnić graczom świeże i ekscytujące doświadczenia. Dołącz do OsloRP, aby stać się częścią naszej dynamicznej przygody. Oferujemy przyjazną atmosferę, wsparcie i przestrzeń, gdzie możesz rozwijać swoje umiejętności role-play`u. Nasz serwer to nie tylko gra, to społeczność, która razem tworzy niesamowity świat.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="offcanvas-menu">
+<span class="menu-close"><i class="fas fa-times"></i></span>
+<div id="cssmenu3" class="menu-one-page-menu-container">
+<ul id="menu-one-page-menu-2" class="menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="index.html">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="regulamin.html">Regulamin</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="statystyki/index.php">Statystyki</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="galeria.html">Galeria </a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="administracja.html">Administracja </a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="tos.html">TOS</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://status.neonrp.pl/">Status</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://neonrp.pl/sklep/">Sklep</a></li>
+</ul>
+</div>
+</div>
+<div class="offcanvas-overly"></div>
 
-            <section id="orp-stats">
-        <div class="orp-container">
-            <div class="orp-stats_content">
-                <div class="orp-stats_box">
-                    <div class="orp-stats_box-item orp-stats_box-players">
-                        <div class="orp-stats_box-item_icon"></div>
-                        <h3 class="orp-stats_box-item_title">358<span>/555</span></h3>
-                    </div>
 
-                    <div class="orp-stats_box-item orp-stats_box-time">
-                        <div class="orp-stats_box-item_icon"></div>
-                        <h3 class="orp-stats_box-item_title">81 DNI</h3>
-                    </div>
+<main>
 
-                    <div class="orp-stats_box-item orp-stats_box-money">
-                        <div class="orp-stats_box-item_icon"></div>
-                        <h3 class="orp-stats_box-item_title">57M</h3>
-                    </div>
 
-                    <div class="orp-stats_box-item orp-stats_box-player">
-                        <div class="orp-stats_box-item_icon"></div>
-                        <h3 class="orp-stats_box-item_title">Chao Lee</h3>
-                    </div>
-
-                    <div class="orp-stats_box-progress">
-                        <div class="orp-stats_box-progress_bar" style="width: 65%;"></div>
-                    </div>
-                </div>
-                <a href="#" class="orp-stats_button"><span>GRAJ</span></a>
-            </div>
-        </div>
-    </section>
-
-    <section id="orp-steps">
-        <div class="orp-container">
-            <h2 class="orp-steps_title">2 kroki <span>i zacznij grę</span></h2>
-            <div class="orp-steps_content">
-                <div class="orp-steps_item">
-                    <div class="orp-steps_item-step">1 krok</div>
-                    <h3 class="orp-steps_item-title">Pobierz launcher <br><span>FiveM</span></h3>
-                    <p class="orp-steps_item-desc">Będziesz potrzebować <a href="#">Licencji</a> GRAND THEFT AUTO V</p>
-                    <a href="https://fivem.net" class="orp-steps_item-button">POBIERZ</a>
-                </div>
-
-                <div class="orp-steps_item">
-                    <div class="orp-steps_item-step">2 krok</div>
-                    <h3 class="orp-steps_item-title"><span>Wejdź na </span><br>Discorda</h3>
-                    <p class="orp-steps_item-desc">Połącz się z serwerem i graj już teraz!</p>
-                    <a href="https://discord.gg/oslorp" class="orp-steps_item-button">DISCORD</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="orp-sponsors">
-    <div class="orp-container">
-        <h2 class="orp-sponsors_title">Nasze współprace</h2>
-        <div class="orp-sponsors_slider">
-            <div class="orp-sponsors_swiper swiper">
-                <div class="swiper-wrapper">
-                                            <div class="swiper-slide"><a href="https://skillhost.pl"><img src="/assets/uploads/logo-skillhost-footer-66213ec6a590a.png" alt=""></a></div>
-                                            <div class="swiper-slide"><a href="https://www.eneba.com/?af_id=OsloRoleplay5&amp;utm_medium=infl&amp;utm_source=OsloRoleplay5"><img src="/assets/uploads/enebaLogoInverted-664c7f501aabd.png" alt=""></a></div>
-                                            <div class="swiper-slide"><a href="https://bit.ly/oslorpfivemods"><img src="/assets/uploads/Frame-652-1-6660dcb2d6180.png" alt=""></a></div>
-                                    </div>
-            </div>
-        </div>
-    </div>
+<section id="home" class="slider-area slider-four fix p-relative">
+<div class="slider-active">
+<div class="single-slider slider-bg d-flex align-items-center" style="background: url(img/slider/slider_img_bg.png) no-repeat;background-size: cover; background-position: center top;">
+<div class="container">
+<div class="row justify-content-center pt-50">
+<div class="col-lg-1 col-md-1">
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="slider-content s-slider-content">
+<h5 data-animation="fadeInDown" data-delay=".4s">#neonrp</h5>
+<h2 data-animation="fadeInUp" data-delay=".4s">Stań się kim tylko chcesz dołączając na nasz serwer!</h2>
+<div class="slider-btn">
+<a href="fivem://connect/ls.neonrp.pl:30120" class="btn ss-btn mr-15">Uruchom Fivem</a>
+</div>
+</div>
+</div>
+<div class="col-lg-5 col-md-5">
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 
-<section id="orp-scoreboard">
-    <div class="orp-container">
-        <h2 class="orp-scoreboard_title">Ranking TOP 3</h2>
-        <div class="orp-scoreboard_content">
-                                            <div class="orp-scoreboard_item">
-                    <div class="orp-scoreboard_item-number">1#</div>
-                    <div class="orp-scoreboard_item-info">
-                        <h3 class="orp-scoreboard_item-info_name">Chao Lee</h3>
-                        <ul class="orp-scoreboard_item-info_stats">
-                            <li class="orp-scoreboard_item-info_stats-money">
-                                <div class="orp-scoreboard_item-info_stats-icon"></div>
-                                <div class="orp-scoreboard_item-info_stats-number">57M</div>
-                            </li>
-                            <li class="orp-scoreboard_item-info_stats-time">
-                                <div class="orp-scoreboard_item-info_stats-icon"></div>
-                                <div class="orp-scoreboard_item-info_stats-number">81 DNI</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                                            <div class="orp-scoreboard_item">
-                    <div class="orp-scoreboard_item-number">2#</div>
-                    <div class="orp-scoreboard_item-info">
-                        <h3 class="orp-scoreboard_item-info_name">Aliya Vandal</h3>
-                        <ul class="orp-scoreboard_item-info_stats">
-                            <li class="orp-scoreboard_item-info_stats-money">
-                                <div class="orp-scoreboard_item-info_stats-icon"></div>
-                                <div class="orp-scoreboard_item-info_stats-number">312M</div>
-                            </li>
-                            <li class="orp-scoreboard_item-info_stats-time">
-                                <div class="orp-scoreboard_item-info_stats-icon"></div>
-                                <div class="orp-scoreboard_item-info_stats-number">78 DNI</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                                            <div class="orp-scoreboard_item">
-                    <div class="orp-scoreboard_item-number">3#</div>
-                    <div class="orp-scoreboard_item-info">
-                        <h3 class="orp-scoreboard_item-info_name">Konrad Stal</h3>
-                        <ul class="orp-scoreboard_item-info_stats">
-                            <li class="orp-scoreboard_item-info_stats-money">
-                                <div class="orp-scoreboard_item-info_stats-icon"></div>
-                                <div class="orp-scoreboard_item-info_stats-number">242M</div>
-                            </li>
-                            <li class="orp-scoreboard_item-info_stats-time">
-                                <div class="orp-scoreboard_item-info_stats-icon"></div>
-                                <div class="orp-scoreboard_item-info_stats-number">74 DNI</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                    </div>
-    </div>
+
+<section id="about" class="about-area about-p p-relative" style="background: url(img/bg/about-bg.png) no-repeat;">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-12">
+<div class="section-title center-align text-center mb-50">
+<h2>
+Co nas <span>wyróżnia?</span>
+</h2>
+<div class="line5"> <img src="img/bg/circle_left.png" alt="circle_left"></div>
+</div>
+</div>
+</div>
 </section>
 
-<footer id="orp-footer">
-    <div class="orp-container">
-        <div class="orp-footer_content">
-            <a href="/" class="orp-footer_logo">
-                <img src="/assets/uploads/orp-logo-66204c591539b.png" alt="">
-            </a>
 
-            <div class="orp-footer_copyright">
-                <b>Oslorp.pl</b> &copy; 2024
-                <div class="orp-footer_copyright-authors">
-                    Realizacja strony <a href="https://seremakedyta.pl" data-tippy-content="Projektowanie stron internetowych">Seremakedyta.pl</a> &amp; <a href="https://skullovsky.pl" data-tippy-content="Programowanie stron internetowych">Skullovsky.pl</a>
-                </div>
-            </div>
+<section id="services" class="services-area what-story pb-90 fix">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-6">
+<div class="services-box mb-30" style="background: url(img/bg/services-bg-01.png) no-repeat;background-size: contain; background-position: center bottom; background-size: cover;">
+<div class="services-content2">
+<div class="services-icon">
+<img src="img/icon/pv-icon1.png" alt="icon01">
+<h5>Optymalizacja</h5>
+</div>
+<p>Na naszym serwerze wyznacznikiem jest komfort naszych graczy.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="services-box mb-30" style="background: url(img/bg/services-bg-01.png) no-repeat;background-size: contain; background-position: center bottom; background-size: cover;">
+<div class="services-content2">
+<div class="services-icon">
+<img src="img/icon/pv-icon2.png" alt="icon01">
+<h5>Doświadczenie</h5>
+</div>
+<p>Projekt rozwija grupa osób posiadająca doświadczenie oraz należną wiedzę.</p>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="services-box mb-30" style="background: url(img/bg/services-bg-01.png) no-repeat;background-size: contain; background-position: center bottom; background-size: cover;">
+<div class="services-content2">
+<div class="services-icon">
+<img src="img/icon/pv-icon3.png" alt="icon01">
+<h5>Innowacje</h5>
+</div>
+<p>Nasz serwer posiada wiele innowacyjnych oraz autorskich rozwiązań.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-            <nav class="orp-footer_menu">
-                <ul>
-    <li><a href="/" data-text="Strona główna">Strona główna</a></li>
-    <li><a href="/ranking" data-text="Ranking">Ranking</a></li>
-    <li><a href="/apps" data-text="Podania">Podania</a></li>
-    <li><a href="https://discord.gg/oslorp" data-text="Discord">Discord</a></li>
-    <li><a href="https://indrop.eu/s/oslorp" data-text="Sklep">Sklep</a></li>
-</ul>            </nav>
 
-            <a href="#goUp" class="orp-footer_goup"><i class="fa-solid fa-chevron-up"></i></a>
-        </div>
-    </div>
+<section id="services" class="services-area what-story pt-120 pb-70 fix" style="background: url(img/bg/match-bg2.png) no-repeat;">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 p-relative">
+<div class="section-title mb-50">
+<h2>
+ZNajdziesz u <span>nas</span>
+</h2>
+<span class="line5"> <img src="img/bg/circle_left.png" alt="circle_left"></span>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-md-6">
+<div class="services-box text-center mb-30">
+<div class="services-icon p-relative mb-30">
+<img src="img/matches/m-07.png" alt="icon01">
+<span>Auta</span>
+</div>
+<div class="services-content3">
+<h4>Customowe Auta</h4>
+<h6>Ponad 200+ róznych modeli samochodów u cardealera</h6>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="services-box text-center mb-30">
+<div class="services-icon p-relative mb-30">
+<img src="img/matches/m-08.png" alt="icon01">
+<span>Crime</span>
+</div>
+<div class="services-content3">
+<h4>Statystyki Organizacji</h4>
+<h6>Autorski system punktacji za wykonance akcje</h6>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="services-box text-center mb-30">
+<div class="services-icon p-relative mb-30">
+<img src="img/matches/m-09.png" alt="icon01">
+<span>Eventy</span>
+</div>
+<div class="services-content3">
+<h4>Eventy</h4>
+<h6>Liczne eventy, zabawy oraz wspólne interakcje!</h6>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="services-box text-center mb-30">
+<div class="services-icon p-relative mb-30">
+<img src="img/matches/m-10.png" alt="icon01">
+<span>Lokacje</span>
+</div>
+<div class="services-content3">
+<h4>Customowe Lokacje</h4>
+<h6>Znajdziesz u nas ciekawe lokalizacje do odgrywania</h6>
+</div>
+</div>
+</div>
+</div>
+<div class="row align-items-center pt-90">
+<div class="col-lg-12 col-md-12 best-gaming" style="background: url(img/features/about_img2.png) no-repeat; background-size: contain;">
+<div class="row">
+<div class="col-lg-6 col-md-12 col-sm-12 pl-50">
+<div class="about-content s-about-content pl-30">
+<div class="about-title second-title pb-25">
+<h2>Jak zacząć grać na serwerze <span>NeonRP</span></h2>
+<div class="line"> <img src="img/bg/circle_left.png" alt="circle_right"></div>
+</div>
+<p>1. Zainstaluj grę Grand Theft Auto V<br> </p>
+<p>2. Pobierz i zainstaluj modyfikacje Fivem<br> </p>
+<p>3. Zaloguj się na steam<br> </p>
+<p>4. Odpal fivem i połącz się z serwerem wpisując w konsoli "connect neonrp.pl<br> </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container" style="padding-top: 80px;">
+<div class="row brand-active">
+<div class="col-xl-2">
+<div class="single-brand">
+<img src="img/brand/b-logo1.png" alt="img">
+</div>
+</div>
+<div class="col-xl-2">
+<div class="single-brand">
+<img src="img/brand/b-logo2.png" alt="img">
+</div>
+</div>
+<div class="col-xl-2">
+<div class="single-brand">
+<img src="img/brand/b-logo3.png" alt="img">
+</div>
+</div>
+<div class="col-xl-2">
+<div class="single-brand">
+<img src="img/brand/b-logo4.png" alt="img">
+</div>
+</div>
+<div class="col-xl-2">
+<div class="single-brand">
+<img src="img/brand/b-logo5.png" alt="img">
+</div>
+</div>
+<div class="col-xl-2">
+<div class="single-brand">
+<img src="img/brand/b-logo6.png" alt="img">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="graph" class="features-area pt-120 pb-120" style="background:url('img/bg/divider-bg.png');">
+<div class="container">
+<div class="row align-items-center text-center">
+<div class="col-lg-12 col-md-12">
+<div class="section-title cta-title  mb-20">
+<h2>Dołącz do community <br> 30.000+ osób!</h2>
+<p>Wierzymy w siłę społeczności. Jako Neon Team jesteśmy bardzo wdzięczni wszystkim, którzy przyczyniają się do projektu. Wnieś swój wkład tworząc historie wraz z innymi członkami naszego community! </p>
+</div>
+<a href="https://discord.com/invite/neonrp" class="btn ss-btn mr-15 mt-20 active">Dołącz</a>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+
+<footer class="footer-bg footer-p" style="background: #1e191f;">
+<div class="footer-top pt-70">
+<div class="container">
+<div class="row justify-content-between">
+<div class="col-xl-4 col-lg-4 col-sm-6">
+<div class="footer-widget mb-30">
+<div class="f-widget-title mb-20">
+<img src="img/logo/f_logo.png" alt="img">
+</div>
+<div class="footer-link">
+NeonRP nie jest powiązany ani wspierany przez Rockstar North,
+Take-Two Interactive ani innych posiadaczy praw.
+</div>
+<div class="f-contact mt-20">
+<ul>
+<li>
+<i class="icon dripicons-mail"></i>
+<span>Email : <a href="/cdn-cgi/l/email-protection#8ce5e2eae3cce9f4ede1fce0e9a2efe3e1"><span class="__cf_email__" data-cfemail="23414a594d4650634d464c4d5746404b4d4c4f4c444a46500d534f">[email&#160;protected]</span></a></span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xl-2 col-lg-2 col-sm-6">
+<div class="footer-widget mb-30">
+<div class="f-widget-title">
+<h2>Szybkie Linki</h2>
+</div>
+<div class="footer-link">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="regulamin.html"> Regulamin</a></li>
+<li><a href="https://discord.com/invite/neonrp"> Discord </a></li>
+<li><a href="https://neonrp.pl/sklep/"> Sklep</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xl-2 col-lg-2 col-sm-6">
+<div class="footer-widget mb-30">
+<div class="f-widget-title">
+<h2>Inne</h2>
+</div>
+<div class="footer-link">
+<ul>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="https://status.neonrp.pl/">Status</a></li>
+<li><a href="galeria.html">Galeria</a></li>
+<li><a href="administracja.html">Administracja</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-xl-3 col-lg-3 col-sm-6">
+<div class="footer-widget mb-30">
+<div class="f-widget-title">
+<h2>Społeczność</h2>
+</div>
+<div class="footer-social  mt-30">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="https://discord.com/invite/neonrp"><i class="fab fa-discord"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="copyright-wrap">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6">
+Copyright © 2022-2024 NeonRP All Rights Reserved.
+</div>
+<div class="col-lg-6 text-right text-xl-right">
+</div>
+</div>
+</div>
+</div>
 </footer>
-    <div id="orp-mobileDrawer">
-        <div class="orp-mobileDrawer_menu">
-            <a href="#" class="orp-mobileDrawer_close"><i class="fa-solid fa-times"></i></a>
-            <div class="orp-mobileDrawer_content">
-                <div class="orp-mobileDrawer_content-userbar">
-                                            <ul class="orp-mobileDrawer_content-buttons">
-                            <li><a href="/login" class="orp-mobileDrawer_content-buttons_login">Logowanie</a></li>
-                        </ul>
-                                    </div>
-                <nav class="orp-mobileDrawer_content-menu">
-                    <ul>
-    <li><a href="/" data-text="Strona główna">Strona główna</a></li>
-    <li><a href="/ranking" data-text="Ranking">Ranking</a></li>
-    <li><a href="/apps" data-text="Podania">Podania</a></li>
-    <li><a href="https://discord.gg/oslorp" data-text="Discord">Discord</a></li>
-    <li><a href="https://indrop.eu/s/oslorp" data-text="Sklep">Sklep</a></li>
-</ul>                </nav>
-            </div>
-        </div>
-    </div>
 
-    <script type="text/javascript" src="/assets/js/jquery-3.7.1.min.js"></script>
-    <script type="text/javascript" src="/assets/js/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="/assets/js/main.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/popper.js@1"></script>
-    <script type="text/javascript" src="https://unpkg.com/tippy.js@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.23/dist/sweetalert2.all.min.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://skrypt-cookies.pl/id/e361a616db01e03e.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
 
-    <script type="text/javascript">
-        tippy("[data-tippy-content]", {
-            animation: "scale",
-            arrow: true,
-            theme: "tooltip"
-        });
-
-        const Toast = Swal.mixin({
-            toast: true,
-            position: 'center-end',
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-                toast.addEventListener('mouseenter', Swal.stopTimer)
-                toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-        });
-    </script>
-
-    <!-- Success notifications -->
-    
-    </body>
+<script src="js/vendor/modernizr-3.5.0.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/vendor/jquery-3.6.0.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/popper.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/bootstrap.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/slick.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/ajax-form.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/paroller.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/wow.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/js_isotope.pkgd.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/imagesloaded.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/parallax.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/jquery.waypoints.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/jquery.counterup.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/jquery.scrollUp.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/jquery.meanmenu.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/parallax-scroll.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/jquery.magnific-popup.min.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/element-in-view.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="js/main.js" type="c65c680bdad69620af0a3e4e-text/javascript"></script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="c65c680bdad69620af0a3e4e-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8a1433192c72cabd","version":"2024.6.1","r":1,"token":"6fb385c6ed114d51a819caf752557691","serverTiming":{}}' crossorigin="anonymous"></script>
+</body>
 </html>
