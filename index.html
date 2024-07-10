@@ -83,6 +83,11 @@
         nav .navbar-toggler {
             display: none;
         }
+        nav img {
+            height: 40px; /* Adjust the height as needed */
+            border-radius: 50%;
+            margin-right: 10px;
+        }
         @media (max-width: 768px) {
             nav .navbar-collapse {
                 display: none;
@@ -110,7 +115,10 @@
 <body>
     <nav>
         <div class="container">
-            <a class="navbar-brand" href="/">Cloud FreeRoam</a>
+            <div style="display: flex; align-items: center;">
+                <img src="path/to/your/image.jpg" alt="Logo"> <!-- Replace with your image path -->
+                <a class="navbar-brand" href="/">Cloud FreeRoam</a>
+            </div>
             <div class="navbar-toggler" onclick="toggleNavbar()">☰</div>
             <div class="navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
