@@ -1,110 +1,206 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serwer FiveM</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .header, .section {
-            background-color: #fff;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .header {
-            text-align: center;
-        }
-        .header h1 {
-            margin: 0;
-            color: #0056b3;
-        }
-        .section h2 {
-            margin-top: 0;
-            color: #333;
-        }
-        .stat {
-            display: flex;
-            justify-content: space-between;
-            margin: 10px 0;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-        }
-    </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content />
+<meta name="author" content />
+<title>Betterside Roleplay</title>
+
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+<style type="text/css">@font-face {font-family:Poppins;font-style:normal;font-weight:300;src:url(/cf-fonts/s/poppins/5.0.11/devanagari/300/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:300;src:url(/cf-fonts/s/poppins/5.0.11/latin/300/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:300;src:url(/cf-fonts/s/poppins/5.0.11/latin-ext/300/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:400;src:url(/cf-fonts/s/poppins/5.0.11/devanagari/400/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:400;src:url(/cf-fonts/s/poppins/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:400;src:url(/cf-fonts/s/poppins/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:500;src:url(/cf-fonts/s/poppins/5.0.11/latin-ext/500/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:500;src:url(/cf-fonts/s/poppins/5.0.11/devanagari/500/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:500;src:url(/cf-fonts/s/poppins/5.0.11/latin/500/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:600;src:url(/cf-fonts/s/poppins/5.0.11/latin-ext/600/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:600;src:url(/cf-fonts/s/poppins/5.0.11/devanagari/600/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:600;src:url(/cf-fonts/s/poppins/5.0.11/latin/600/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:700;src:url(/cf-fonts/s/poppins/5.0.11/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:700;src:url(/cf-fonts/s/poppins/5.0.11/latin-ext/700/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:700;src:url(/cf-fonts/s/poppins/5.0.11/devanagari/700/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF;font-display:swap;}</style>
+<style type="text/css">@font-face {font-family:Merriweather Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/s/merriweather-sans/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Merriweather Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/s/merriweather-sans/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Merriweather Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/s/merriweather-sans/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Merriweather Sans;font-style:normal;font-weight:400;src:url(/cf-fonts/s/merriweather-sans/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Merriweather Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/s/merriweather-sans/5.0.11/latin-ext/700/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Merriweather Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/s/merriweather-sans/5.0.11/vietnamese/700/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Merriweather Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/s/merriweather-sans/5.0.11/cyrillic-ext/700/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Merriweather Sans;font-style:normal;font-weight:700;src:url(/cf-fonts/s/merriweather-sans/5.0.11/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}</style>
+<style type="text/css">@font-face {font-family:Merriweather;font-style:normal;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:300;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic/300/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:300;src:url(/cf-fonts/s/merriweather/5.0.11/latin-ext/300/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:300;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic-ext/300/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:300;src:url(/cf-fonts/s/merriweather/5.0.11/latin/300/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:300;src:url(/cf-fonts/s/merriweather/5.0.11/vietnamese/300/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:300;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic/300/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:300;src:url(/cf-fonts/s/merriweather/5.0.11/vietnamese/300/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:300;src:url(/cf-fonts/s/merriweather/5.0.11/latin-ext/300/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:300;src:url(/cf-fonts/s/merriweather/5.0.11/latin/300/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:300;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic-ext/300/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic/400/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/latin/400/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic-ext/400/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/vietnamese/400/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:400;src:url(/cf-fonts/s/merriweather/5.0.11/latin-ext/400/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/latin-ext/700/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/vietnamese/700/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic-ext/700/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Merriweather;font-style:normal;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic/700/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/vietnamese/700/italic.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic/700/italic.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/cyrillic-ext/700/italic.woff2);unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/latin/700/italic.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Merriweather;font-style:italic;font-weight:700;src:url(/cf-fonts/s/merriweather/5.0.11/latin-ext/700/italic.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}</style>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+
+<link href="css/styles.css" rel="stylesheet" />
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Witamy na Serwerze FiveM</h1>
-        </div>
-        
-        <div class="section">
-            <h2>Statystyki Serwera</h2>
-            <div class="stat">
-                <span>Rekord Graczy:</span>
-                <span id="rekordGraczy">120</span>
-            </div>
-            <div class="stat">
-                <span>Unikalnych Graczy:</span>
-                <span id="unikalnychGraczy">450</span>
-            </div>
-            <div class="stat">
-                <span>Osób na Discordzie:</span>
-                <span id="osobyDiscord">300</span>
-            </div>
-        </div>
+<body id="page-top">
 
-        <div class="section">
-            <h2>Co Oferuje Nasz Serwer</h2>
-            <ul>
-                <li>Rozbudowany system ekonomiczny</li>
-                <li>Realistyczne mechaniki pojazdów</li>
-                <li>Różnorodne zadania i misje</li>
-                <li>Aktywną społeczność i wsparcie administracyjne</li>
-            </ul>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
+<div class="container px-4 px-lg-6">
+<a class="navbar-brand" href="/">Betterside</a>
+<button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav ms-auto my-2 my-lg-0">
+<li class="nav-item"><a class="nav-link" href="https://docs.google.com/document/d/1onS0zO5pcfrexUAP2xeu9MwXCHjbqAu04v9fQGHKfUg/" target="_blank">Regulamin</a></li>
+<li class="nav-item"><a class="nav-link" href="https://discord.com/invite/betterside" target="_blank">Discord</a></li>
+<li class="nav-item"><a class="nav-link" href="fivem://connect/off.betterside.eu">FiveM</a></li>
+<li class="nav-item"><a class="nav-link" href="https://sklep.betterside.eu">Sklep</a></li>
+</ul>
+</div>
+</div>
+</nav>
 
-        <div class="section">
-            <h2>Twórcy Projektu</h2>
-            <ul>
-                <li>Jan Kowalski - Główny Programista</li>
-                <li>Anna Nowak - Grafik</li>
-                <li>Piotr Wiśniewski - Administrator Serwera</li>
-            </ul>
-        </div>
-        
-        <div class="footer">
-            <p>&copy; 2024 Serwer FiveM. Wszelkie prawa zastrzeżone.</p>
-        </div>
-    </div>
+<header class="masthead">
+<div class="container px-4 px-lg-5 h-100">
+<div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+<div class="col-lg-8 align-self-end">
+<h1 class="text-white font-weight-bold">Najlepszy i największy polski serwer Roleplay WL-OFF</h1>
+<hr class="divider" />
+</div>
+<div class="col-lg-8 align-self-baseline">
+<p class="text-white-75 mb-5">Dołącz do nas już dziś i rozpocznij swoją wirtualną przygodę w Los Santos. <a style="text-decoration: none" href="assets/img/fine.gif" target="_blank">🔥</href></p>
+<a class="btn btn-primary btn-xl" href="https://discord.com/invite/betterside">Nasz serwer discord</a>
+</div>
+</div>
+</div>
+</header>
+<section class="page-section">
+<div class="container px-4 px-lg-5">
+<div class="row gx-1 gx-lg-1 justify-content-center">
+<h2 class="text-white mt-0 text-center">Statystyki</h2>
+<hr class="divider divider-dark" />
+<div class="row text-center">
+<div class="serverStats">
+<div class="statsBlock">
+Graczy online:<br><span id="activePlayers"></span>
+</div>
+<div class="statsBlock">
+Rekord graczy:<br>1061
+</div>
+<div class="statsBlock">
+Unikalnych graczy:<br>100 000+
+</div>
+<div class="statsBlock">
+Osób na discordzie:<br><span id="discordMembers"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-    <script>
-        // Tu możesz dodać kod JavaScript do dynamicznego aktualizowania statystyk.
-        // Przykład użycia fetch API do pobierania danych z serwera:
-        // fetch('/api/stats')
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         document.getElementById('rekordGraczy').textContent = data.rekordGraczy;
-        //         document.getElementById('unikalnychGraczy').textContent = data.unikalnychGraczy;
-        //         document.getElementById('osobyDiscord').textContent = data.osobyDiscord;
-        //     });
-    </script>
-</body>
+<section class="page-section bg-primary" id="about">
+<div class="container px-4 px-lg-5">
+<div class="row gx-4 gx-lg-5 justify-content-center">
+<div class="col-lg-8 text-center">
+<h2 class="text-white mt-0">Dlaczego my?</h2>
+<hr class="divider divider-light" />
+<p class="text-white-75 mb-4">Jesteśmy największym polskim serwerem Roleplay bez wymaganej white-listy, co pozwala na rozpoczęcie rozgrywki od razu po wejściu na nasz serwer Discord.</p>
+<a class="btn btn-light btn-xl" href="https://discord.com/invite/betterside">Dołącz do nas</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page-section" id="services">
+<div class="container px-4 px-lg-5">
+<h2 class="text-center text-white mt-0">Co oferujemy?</h2>
+<hr class="divider" />
+<div class="row gx-4 gx-lg-5">
+<div class="col-lg-3 col-md-6 text-center">
+<div class="mt-5">
+<div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
+<h3 class="h4 mb-2 text-white">Dbałość o poziom Roleplay</h3>
+<p class="text-muted mb-0">Na serwerze staramy sie utrzymać jak najwyższy poziom roleplay'u połączony z dobrą zabawą.</p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 text-center">
+<div class="mt-5">
+<div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
+<h3 class="h4 mb-2 text-white">Częste aktualizacje</h3>
+<p class="text-muted mb-0">Aktualna edycja trwa od 2 kwietnia 2021 czyli od samego startu serwera, mimo wszystko serwer ciągle się rozwija bez niepotrzebnych wipe'ów!</p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 text-center">
+<div class="mt-5">
+<div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
+<h3 class="h4 mb-2 text-white">Optymalizacja</h3>
+<p class="text-muted mb-0">Nasz serwer jest zoptymalizowany tak, aby zapewnić jak najlepszą przyjemność z gry mimo sporej ilości graczy.</p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 text-center">
+<div class="mt-5">
+<div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
+<h3 class="h4 mb-2 text-white">Szybka pomoc</h3>
+<p class="text-muted mb-0">Nasza administracja stara się jak najszybciej rozwiązać problemy graczy, które wystąpiły podczas rozgrywki.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="page-section bg-dark text-white">
+<div class="container px-4 px-lg-5 text-center">
+<h2 class="mb-4">Dołącz na nasz serwer Discord</h2>
+<a class="btn btn-light btn-xl" href="https://discord.com/invite/betterside">Dołącz</a>
+</div>
+</section>
+
+<div class="page-section" id="portfolio">
+<div class="container px-4 px-lg-5">
+<h2 class="text-center text-white mt-0">Twórcy projektu</h2>
+<hr class="divider" />
+<div class="row gx-4 gx-lg-5">
+<div class="col-lg-3 col-md-6 text-center">
+<div class="mt-5">
+<div class="mb-2"></div>
+<h3 class="h4 mb-2"></h3>
+<p class="text-muted mb-0"></p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 text-center">
+<div class="mt-5">
+<div class="mb-2"><img class="avatar" src="assets/img/wujek_better.png"></div>
+<h3 class="h4 mb-2 text-white">Wujek_Better</h3>
+<p class="text-muted mb-0">Project Owner<br>Wujas 🍻</p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 text-center">
+<div class="mt-5">
+<div class="mb-2"><img class="avatar" src="assets/img/tomson701.png"></div>
+<h3 class="h4 mb-2 text-white">Tomson701</h3>
+<p class="text-muted mb-0">Project Owner<br>Lead Developer</p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 text-center">
+<div class="mt-5">
+<div class="mb-2"></div>
+<h3 class="h4 mb-2"></h3>
+<p class="text-muted mb-0"></p>
+</div>
+</div>
+</div>
+<h2 class="text-center text-white mt-6">Partner</h2>
+<hr class="divider" />
+<div class="row">
+<div class="col-sm text-center">
+<div class="mt-5">
+<div class="mb-2"></div>
+<h3 class="h4 mb-2"></h3>
+<p class="text-muted mb-0"></p>
+</div>
+</div>
+<div class="col-sm text-center">
+<div class="mt-5">
+<div class="mb-2"><a href="https://discord.gg/avoro" target="_blank"><img class="logoA" src="assets/img/avoro.png"></a></div>
+</div>
+</div>
+<div class="col-sm text-center">
+<div class="mt-5">
+<div class="mb-2"></div>
+<h3 class="h4 mb-2"></h3>
+<p class="text-muted mb-0"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="bg-dark py-5">
+<div class="container px-4 px-lg-6"><div class="small text-center text-muted">Copyright &copy; 2024 - Made by K1ndly</div></div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" type="04aaf7d2970028ad7037a34d-text/javascript"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js" type="04aaf7d2970028ad7037a34d-text/javascript"></script>
+
+<script src="js/scripts.js" type="04aaf7d2970028ad7037a34d-text/javascript"></script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="04aaf7d2970028ad7037a34d-|49" defer></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8a13d12dd954caa9',t:'MTcyMDY0ODcyNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
