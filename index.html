@@ -11,6 +11,7 @@
             color: #333;
             margin: 0;
             padding: 0;
+            transition: background-color 0.3s ease-in-out;
         }
         .container {
             width: 80%;
@@ -23,22 +24,30 @@
             margin: 10px 0;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
         }
         .header {
             text-align: center;
+            background-color: #0056b3;
+            color: #fff;
         }
         .header h1 {
             margin: 0;
-            color: #0056b3;
         }
         .section h2 {
             margin-top: 0;
-            color: #333;
+            color: #0056b3;
         }
         .stat {
             display: flex;
             justify-content: space-between;
             margin: 10px 0;
+        }
+        .stat span:last-child {
+            color: #0056b3;
+            font-weight: bold;
         }
         .footer {
             text-align: center;
@@ -51,6 +60,11 @@
             background-color: #333;
             color: #fff;
             padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease-in-out;
         }
         nav .container {
             display: flex;
@@ -61,6 +75,10 @@
             color: #fff;
             text-decoration: none;
             margin: 0 10px;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #ffd700;
         }
         nav .navbar-toggler {
             display: none;
@@ -70,6 +88,8 @@
                 display: none;
                 flex-direction: column;
                 align-items: flex-start;
+                background-color: #333;
+                width: 100%;
             }
             nav .navbar-toggler {
                 display: block;
@@ -77,6 +97,12 @@
             }
             nav .navbar-collapse.show {
                 display: flex;
+            }
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
@@ -97,7 +123,7 @@
         </div>
     </nav>
     
-    <div class="container">
+    <div class="container" style="padding-top: 80px;">
         <div class="header">
             <h1>Witamy na Serwerze Cloud FreeRoam</h1>
         </div>
