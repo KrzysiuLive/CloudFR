@@ -18,6 +18,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            padding-top: 120px; /* Dostosowane wypełnienie */
         }
         .header, .section {
             background-color: #fff;
@@ -67,11 +68,13 @@
             top: 0;
             z-index: 1000;
             transition: background 0.3s ease-in-out;
+            height: 100px; /* Określenie wysokości nawigacji */
         }
         nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 100%; /* Dopasowanie do wysokości nawigacji */
         }
         nav a {
             color: #fff;
@@ -133,7 +136,7 @@
         </div>
     </nav>
     
-    <div class="container" style="padding-top: 80px;">
+    <div class="container">
         <div class="header">
             <h1>Witamy na Serwerze Cloud FreeRoam</h1>
         </div>
