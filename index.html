@@ -18,7 +18,6 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            padding-top: 80px; /* Dostosowane wypełnienie */
         }
         .header, .section {
             background-color: #fff;
@@ -62,23 +61,17 @@
             background: url('https://imgur.com/8tS4aOz.jpg') no-repeat center center;
             background-size: cover;
             color: #fff;
-            padding: 0 20px;
+            padding: 10px 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             transition: background 0.3s ease-in-out;
-            display: flex;
-            align-items: center;
-            justify-content: space-between; /* Ustawienie elementów na boki */
-            height: 60px; /* Określenie wysokości nawigacji */
         }
         nav .container {
             display: flex;
             justify-content: space-between;
-            align-items: center; /* Wyrównanie elementów do środka w pionie */
-            height: 100%; /* Dopasowanie do wysokości nawigacji */
-            width: 100%; /* Ustawienie szerokości kontenera */
+            align-items: center;
         }
         nav a {
             color: #fff;
@@ -91,19 +84,6 @@
         }
         nav .navbar-toggler {
             display: none;
-        }
-        nav .navbar-brand {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        nav .navbar-nav {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav .nav-item {
-            margin: 0 10px;
         }
         @media (max-width: 768px) {
             nav .container {
@@ -153,7 +133,7 @@
         </div>
     </nav>
     
-    <div class="container">
+    <div class="container" style="padding-top: 80px;">
         <div class="header">
             <h1>Witamy na Serwerze Cloud FreeRoam</h1>
         </div>
